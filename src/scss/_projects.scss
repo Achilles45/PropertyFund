@@ -1,0 +1,85 @@
+.projects-section{
+    background:#1C2134;
+    margin-top:3rem;
+    .projects-section__contents{
+        padding:3rem 0;
+        .projects__heading{
+            padding-top:3rem;
+            text-align: center;
+            width:40%;
+            margin:0 auto;
+            h3{
+                margin-bottom: 1rem;
+                color:#fafafa;
+            }
+            .project-search-form__wrapper{
+                // background: #F8FAFF;
+                // height:3rem;
+                // width:100%;
+                // align-items: center;
+                input[type=text]{
+                    width:100%;
+                    padding:.5rem 1.5rem;
+                    margin-top: .5rem;
+                    margin-left: 1rem;
+                    height:2.5rem;
+                    outline:none;
+                    border:#fff;
+                    &::placeholder{
+                        font-family: 'Varela Round';
+                        font-size:.9rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+.projects{
+    width:85%;
+    margin:0 auto;
+    margin-top:2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-gap:30px;
+    .project__card{
+        background: #F8FAFF;
+        box-shadow: 0px 0px 2px 0px #fafafa;
+        border-radius: 5px;
+        .project__card{
+            height:50px;
+            width: 100%;
+        }
+        .projects-photo{
+            width:100%;
+            max-width:290px;
+            height: 100%;
+        }
+        .project__body{
+            margin: .5rem 0rem;
+            padding:0rem 1.5rem;
+            h4{
+                color:$primary-color;
+                padding-bottom: .2rem;
+                opacity: .7;
+            }
+            p{
+                color: #616161;
+                font-size:.79rem;
+                opacity: .9;
+            }
+            .project-buttons{
+                margin:.5rem 0;
+            }
+            .project-btn{
+                text-decoration: none;
+                background: $secondary-color;
+                padding:.3rem 1.2rem;
+                color:#fff;
+                border-radius: 2px;
+                border:none;
+                cursor: pointer;
+            }
+        }
+    }
+}

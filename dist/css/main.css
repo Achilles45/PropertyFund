@@ -1,0 +1,650 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+body {
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden; }
+
+hr {
+  opacity: .5; }
+
+.container {
+  width: 90%;
+  margin: 0 auto; }
+
+.d-flex {
+  display: -webkit-flex;
+  display: flex; }
+
+.justify-between {
+  justify-content: space-between; }
+
+.text-center {
+  text-align: center; }
+
+.space-around {
+  justify-content: space-around; }
+
+header {
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5); }
+  header .header__wrapper {
+    width: 100%; }
+  header .header__contents {
+    align-items: center;
+    padding: .9rem 0; }
+    header .header__contents .logo {
+      color: rgba(0, 0, 0, 0.7); }
+      header .header__contents .logo .fa-home {
+        color: #144499; }
+    header .header__contents .nav-links {
+      align-items: center !important; }
+      header .header__contents .nav-links li > a {
+        text-decoration: none;
+        padding-left: 20px;
+        color: #144499;
+        font-weight: 500;
+        font-size: 1rem; }
+        header .header__contents .nav-links li > a:hover {
+          color: #30C57B;
+          transition: all ease-in-out .5s; }
+
+.nav-cart {
+  font-size: 20px; }
+
+.nav-message {
+  height: 27px; }
+
+.navbar-toggler {
+  display: none; }
+
+.welcome-message {
+  position: absolute;
+  right: 0;
+  background: #ffffff;
+  height: 590px;
+  display: none;
+  padding: 2rem 6rem;
+  width: 50%; }
+  .welcome-message h3 {
+    margin-top: 2rem;
+    margin-bottom: 3rem; }
+
+.welcome-message--animate {
+  transition: all ease-in .5s;
+  display: block; }
+
+.cancel-sign {
+  position: absolute;
+  right: 0; }
+
+.removeIcon {
+  margin-right: 2rem;
+  cursor: pointer;
+  font-size: 2rem; }
+
+.hero-section {
+  width: 100%;
+  height: 657px;
+  position: relative;
+  background: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url("/dist/images/property.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .hero-section .hero-section__contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
+    .hero-section .hero-section__contents .hero-section__text h1 {
+      color: #fff; }
+    .hero-section .hero-section__contents .hero-section__text p {
+      font-size: .9rem;
+      opacity: .8;
+      color: #fff; }
+    .hero-section .hero-section__contents .hero-section__text .register-btn {
+      color: #fff;
+      background: #144499;
+      padding: 1rem 3rem;
+      text-align: center;
+      border-radius: 4px;
+      text-decoration: none; }
+      .hero-section .hero-section__contents .hero-section__text .register-btn:hover {
+        background: #30C57B;
+        transition: all ease-out .5s; }
+
+.cart {
+  position: absolute;
+  top: 65px;
+  background: #F8FAFF;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  width: 18%;
+  right: 100px;
+  padding: 1.5rem 1rem;
+  display: none; }
+
+.cart-buttons {
+  text-align: center;
+  margin-bottom: 1rem; }
+
+.view__cart--btn {
+  border: 1px solid #000;
+  color: 616161;
+  outline: none;
+  box-shadow: none;
+  padding: .4rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Varela Round';
+  font-weight: bold;
+  background: #fff;
+  width: 80%; }
+
+.show-cart {
+  display: block; }
+
+.cart__item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  grid-gap: 10px;
+  color: #616161; }
+  .cart__item .cart__item--img {
+    width: 100%;
+    max-width: 50px;
+    max-height: 50px; }
+  .cart__item .cart__item--name {
+    color: #616161;
+    font-weight: bold; }
+
+.how-it-works {
+  margin: 5rem 0; }
+  .how-it-works .how-it-works__contents .how-it-works__description {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto; }
+    .how-it-works .how-it-works__contents .how-it-works__description h3 {
+      color: #144499;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+      opacity: .7; }
+    .how-it-works .how-it-works__contents .how-it-works__description p {
+      color: #616161;
+      padding-top: .5rem;
+      padding-bottom: 2rem;
+      opacity: .9;
+      font-size: .9rem; }
+  .how-it-works .how-it-works__contents .process {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 2.5rem; }
+    .how-it-works .how-it-works__contents .process .process-card {
+      background: #F8FAFF;
+      padding: 3rem 1.5rem;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+      border-radius: 4px; }
+      .how-it-works .how-it-works__contents .process .process-card .process-card__img {
+        width: 40%; }
+      .how-it-works .how-it-works__contents .process .process-card .process-card__icon {
+        color: #30C57B;
+        font-size: 1.5rem; }
+      .how-it-works .how-it-works__contents .process .process-card .process-card__heading h4 {
+        color: #144499;
+        opacity: .6; }
+      .how-it-works .how-it-works__contents .process .process-card .process-card__heading p {
+        color: #616161;
+        margin-top: .5rem;
+        font-size: .79rem;
+        opacity: .9; }
+
+.projects-section {
+  background: #1C2134;
+  margin-top: 3rem; }
+  .projects-section .projects-section__contents {
+    padding: 3rem 0; }
+    .projects-section .projects-section__contents .projects__heading {
+      padding-top: 3rem;
+      text-align: center;
+      width: 40%;
+      margin: 0 auto; }
+      .projects-section .projects-section__contents .projects__heading h3 {
+        margin-bottom: 1rem;
+        color: #fafafa; }
+      .projects-section .projects-section__contents .projects__heading .project-search-form__wrapper input[type=text] {
+        width: 100%;
+        padding: .5rem 1.5rem;
+        margin-top: .5rem;
+        margin-left: 1rem;
+        height: 2.5rem;
+        outline: none;
+        border: #fff; }
+        .projects-section .projects-section__contents .projects__heading .project-search-form__wrapper input[type=text]::placeholder {
+          font-family: 'Varela Round';
+          font-size: .9rem;
+          font-weight: bold; }
+
+.projects {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-gap: 30px; }
+  .projects .project__card {
+    background: #F8FAFF;
+    box-shadow: 0px 0px 2px 0px #fafafa;
+    border-radius: 5px; }
+    .projects .project__card .project__card {
+      height: 50px;
+      width: 100%; }
+    .projects .project__card .projects-photo {
+      width: 100%;
+      max-width: 290px;
+      height: 100%; }
+    .projects .project__card .project__body {
+      margin: .5rem 0rem;
+      padding: 0rem 1.5rem; }
+      .projects .project__card .project__body h4 {
+        color: #144499;
+        padding-bottom: .2rem;
+        opacity: .7; }
+      .projects .project__card .project__body p {
+        color: #616161;
+        font-size: .79rem;
+        opacity: .9; }
+      .projects .project__card .project__body .project-buttons {
+        margin: .5rem 0; }
+      .projects .project__card .project__body .project-btn {
+        text-decoration: none;
+        background: #30C57B;
+        padding: .3rem 1.2rem;
+        color: #fff;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer; }
+
+.about-us {
+  margin-top: 2.5rem; }
+  .about-us .about-us__contents .about__description {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 3.5rem 0; }
+    .about-us .about-us__contents .about__description h3 {
+      padding-top: 2rem;
+      color: #144499;
+      margin-bottom: .5rem; }
+    .about-us .about-us__contents .about__description p {
+      color: #616161;
+      font-size: .89rem; }
+  .about-us .about-us__contents .about__services {
+    width: 90%;
+    margin: 0 auto; }
+    .about-us .about-us__contents .about__services h4 {
+      color: #144499;
+      text-align: center; }
+    .about-us .about-us__contents .about__services .services {
+      margin: 2.5rem 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-gap: 30px; }
+      .about-us .about-us__contents .about__services .services .services__card {
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 2rem 3rem;
+        background: #F8FAFF;
+        border-radius: 4px; }
+        .about-us .about-us__contents .about__services .services .services__card h5 {
+          color: #144499;
+          padding: .5rem 0; }
+        .about-us .about-us__contents .about__services .services .services__card p {
+          color: #616161;
+          font-size: .79rem; }
+        .about-us .about-us__contents .about__services .services .services__card .service-icons {
+          color: #30C57B; }
+
+.developer {
+  background: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url("/dist/images/property.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .developer .developer__contents {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding: 8rem 0;
+    color: #fafafa; }
+    .developer .developer__contents h3 {
+      padding-bottom: 2rem;
+      letter-spacing: .05rem; }
+    .developer .developer__contents p {
+      margin-bottom: 3rem;
+      opacity: .8; }
+    .developer .developer__contents .register-btn {
+      color: #fff;
+      background: #144499;
+      padding: 1rem 3rem;
+      text-align: center;
+      border-radius: 4px;
+      text-decoration: none; }
+      .developer .developer__contents .register-btn:hover {
+        background: #30C57B;
+        transition: all ease-out .5s; }
+
+.testimonial {
+  margin: 3rem 0; }
+  .testimonial .testimonial__contents {
+    text-align: center;
+    width: 805;
+    margin: 0 auto; }
+    .testimonial .testimonial__contents h3 {
+      text-align: center;
+      padding-bottom: 1.5rem;
+      color: #144499;
+      opacity: .8; }
+    .testimonial .testimonial__contents .owl-carousel .item {
+      background: #F8FAFF;
+      box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.14);
+      border-radius: 5px;
+      padding: 2rem 3rem;
+      height: 12rem; }
+    .testimonial .testimonial__contents .owl-carousel .owl-dots {
+      display: none; }
+
+footer .footer__contents {
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 30px;
+  color: #616161; }
+  footer .footer__contents ul li a {
+    text-decoration: none;
+    color: #616161;
+    line-height: 1.1;
+    font-size: .79rem; }
+    footer .footer__contents ul li a:hover {
+      color: #30C57B; }
+  footer .footer__contents h4 {
+    padding-bottom: .5rem;
+    font-size: .89rem;
+    font-weight: bold; }
+  footer .footer__contents p {
+    font-size: .79rem;
+    letter-spacing: .04rem; }
+  footer .footer__contents input[type=text] {
+    width: 100%;
+    padding: .5rem .5rem;
+    margin-top: .5rem;
+    border: 1px solid #616161;
+    outline: none; }
+    footer .footer__contents input[type=text]::placeholder {
+      font-family: 'Varela Round';
+      font-weight: bold; }
+  footer .footer__contents .newsletter-btn {
+    background: #144499;
+    padding: .5rem 1rem;
+    color: #fff;
+    margin-top: .5rem;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Varela Round';
+    letter-spacing: .05rem; }
+    footer .footer__contents .newsletter-btn:hover {
+      background: #30C57B;
+      transition: all ease-in-out 0.5s; }
+
+footer .fa-home {
+  color: #144499; }
+
+footer .socials {
+  margin-top: .5rem;
+  width: 50%; }
+  footer .socials .fa-facebook-f, footer .socials .fa-twitter, footer .socials .fa-instagram {
+    cursor: pointer;
+    background: #144499;
+    color: #fff;
+    border-radius: 50px;
+    padding: .6rem; }
+    footer .socials .fa-facebook-f:hover, footer .socials .fa-twitter:hover, footer .socials .fa-instagram:hover {
+      background: #30C57B; }
+
+.login__wrapper {
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url("/dist/images/property.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .login__wrapper .login-form__wrapper {
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 8.5rem;
+    text-align: center; }
+    .login__wrapper .login-form__wrapper .login-form {
+      background: #fafafa;
+      padding: 1rem 2rem;
+      font-family: 'Varela Round'; }
+      .login__wrapper .login-form__wrapper .login-form .fa-home {
+        color: #144499; }
+      .login__wrapper .login-form__wrapper .login-form h1 {
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+        color: #144499; }
+      .login__wrapper .login-form__wrapper .login-form input[type=text], .login__wrapper .login-form__wrapper .login-form input[type=password] {
+        width: 100%;
+        height: 2.7rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        font-family: "Varela Round";
+        border: 1px solid #636161; }
+        .login__wrapper .login-form__wrapper .login-form input[type=text]::placeholder, .login__wrapper .login-form__wrapper .login-form input[type=password]::placeholder {
+          font-family: "Varela Round"; }
+      .login__wrapper .login-form__wrapper .login-form input[type=text], .login__wrapper .login-form__wrapper .login-form input[type=password]:focus {
+        outline: none;
+        box-shadow: none;
+        border: 1px solid #616161; }
+      .login__wrapper .login-form__wrapper .login-form .login-btn {
+        width: 100%;
+        color: #fff;
+        background: #144499;
+        padding: .8rem 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+        font-family: 'Varela Round';
+        font-size: 1rem; }
+        .login__wrapper .login-form__wrapper .login-form .login-btn:hover {
+          background: #30C57B;
+          transition: all ease-in-out .5s; }
+      .login__wrapper .login-form__wrapper .login-form .create-account__bnt {
+        color: #fff;
+        background: #30C57B;
+        padding: .6rem;
+        font-family: 'Varela Round';
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        width: 100% !important;
+        display: block;
+        margin-bottom: 1rem; }
+        .login__wrapper .login-form__wrapper .login-form .create-account__bnt:hover {
+          background: #144499;
+          transition: all ease-in-out .5s; }
+      .login__wrapper .login-form__wrapper .login-form .forget-password {
+        text-decoration: none;
+        color: #30C57B;
+        margin-bottom: 3rem; }
+
+.danger-alert {
+  width: 100%;
+  background: red;
+  color: #fff;
+  padding: .7rem 0;
+  margin-bottom: 1rem; }
+
+.register__wrapper {
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url("/dist/images/property.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .register__wrapper .register-form__wrapper {
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 8.5rem;
+    text-align: center; }
+    .register__wrapper .register-form__wrapper .register-form {
+      background: #fafafa;
+      padding: 1rem 1.7rem;
+      font-family: 'Varela Round'; }
+      .register__wrapper .register-form__wrapper .register-form .fa-home {
+        color: #144499; }
+      .register__wrapper .register-form__wrapper .register-form h1 {
+        margin-bottom: 4rem;
+        margin-top: 3rem;
+        color: #144499; }
+      .register__wrapper .register-form__wrapper .register-form input[type=text], .register__wrapper .register-form__wrapper .register-form input[type=password], .register__wrapper .register-form__wrapper .register-form input[type=email] {
+        width: 170px;
+        height: 2.4rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        font-family: "Varela Round";
+        border: 1px solid #636161; }
+        .register__wrapper .register-form__wrapper .register-form input[type=text]::placeholder, .register__wrapper .register-form__wrapper .register-form input[type=password]::placeholder, .register__wrapper .register-form__wrapper .register-form input[type=email]::placeholder {
+          font-family: "Varela Round"; }
+      .register__wrapper .register-form__wrapper .register-form select {
+        width: 100%;
+        height: 2.4rem;
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        font-family: "Varela Round";
+        border: 1px solid #636161; }
+        .register__wrapper .register-form__wrapper .register-form select:focus {
+          outline: none;
+          box-shadow: none; }
+      .register__wrapper .register-form__wrapper .register-form input[type=text], .register__wrapper .register-form__wrapper .register-form input[type=password]:focus {
+        outline: none;
+        box-shadow: none; }
+      .register__wrapper .register-form__wrapper .register-form .register-btn {
+        width: 100%;
+        color: #fff;
+        background: #144499;
+        padding: .8rem 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+        font-weight: normal;
+        font-family: 'Varela Round';
+        font-size: 1rem; }
+        .register__wrapper .register-form__wrapper .register-form .register-btn:hover {
+          background: #30C57B;
+          transition: all ease-in-out .5s; }
+      .register__wrapper .register-form__wrapper .register-form .login-btn {
+        display: block;
+        text-decoration: none;
+        width: 100%;
+        color: #fff;
+        background: #30C57B;
+        padding: .7rem 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        font-weight: normal;
+        font-family: 'Varela Round';
+        font-size: 1rem; }
+        .register__wrapper .register-form__wrapper .register-form .login-btn:hover {
+          background: #144499;
+          transition: all ease-in-out .5s; }
+
+.danger-alert {
+  width: 100%;
+  background: red;
+  color: #fff;
+  padding: .7rem 0;
+  margin-bottom: 1rem; }
+
+.success-alert {
+  width: 100%;
+  background: green;
+  color: #fff;
+  padding: .7rem 0;
+  margin-bottom: 1rem; }
+
+.password-reset__wrapper {
+  width: 100%;
+  height: 800px;
+  background: linear-gradient(rgba(4, 9, 30, 0.9), rgba(4, 9, 30, 0.9)), url("/dist/images/property.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .password-reset__wrapper .reset-form__wrapper {
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 10rem;
+    text-align: center; }
+    .password-reset__wrapper .reset-form__wrapper .reset-form {
+      background: #fafafa;
+      padding: 1rem 2rem;
+      font-family: 'Varela Round'; }
+      .password-reset__wrapper .reset-form__wrapper .reset-form h1 {
+        margin-bottom: 4rem;
+        color: #144499; }
+    .password-reset__wrapper .reset-form__wrapper input[type=email] {
+      width: 100%;
+      height: 2.7rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      font-family: "Varela Round";
+      border: 1px solid #636161; }
+      .password-reset__wrapper .reset-form__wrapper input[type=email]::placeholder {
+        font-family: "Varela Round"; }
+      .password-reset__wrapper .reset-form__wrapper input[type=email]:focus {
+        box-shadow: none;
+        outline: none; }
+    .password-reset__wrapper .reset-form__wrapper .pass-reset-btn {
+      width: 100%;
+      color: #fff;
+      background: #144499;
+      padding: .8rem 0;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+      font-family: 'Varela Round';
+      font-size: 1rem;
+      box-shadow: none; }
+      .password-reset__wrapper .reset-form__wrapper .pass-reset-btn:hover {
+        background: #30C57B;
+        transition: all ease-in-out .5s; }
+
+.danger-alert {
+  width: 100%;
+  background: red;
+  color: #fff;
+  padding: .7rem 0;
+  margin-bottom: 1rem; }

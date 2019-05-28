@@ -1,0 +1,53 @@
+.about-us{
+    margin-top:2.5rem;
+    .about-us__contents{
+        .about__description{
+            text-align: center;
+            width:60%;
+            margin:0 auto;
+            padding:3.5rem 0;
+
+            h3{
+                padding-top:2rem;
+                color:$primary-color;
+                margin-bottom: .5rem
+            }
+            p{
+                color: #616161;
+                font-size:.89rem;
+            }
+        }
+        .about__services{
+            width:90%;
+            margin:0 auto;
+            h4{
+                color:$primary-color;
+                text-align: center;
+            }
+            .services{
+                margin:2.5rem 0;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                grid-gap:30px;
+                .services__card{
+                    box-shadow: 0px 0px 2px rgba(0,0,0,.3);
+                    text-align: center;
+                    padding:2rem 3rem;
+                    background: #F8FAFF;
+                    border-radius: 4px;
+                    h5{
+                        color:$primary-color;
+                        padding:.5rem 0;
+                    }
+                    p{
+                        color: #616161;
+                        font-size:.79rem;
+                    }
+                    .service-icons{
+                        color:$secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}

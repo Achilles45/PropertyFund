@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <title>Register and grow your portfolio</title>
+</head>
+<body>
+    <!-- Wrapper for whole page
+    =======================================-->
+    <div class="register__wrapper">
+            <div class="register-form__wrapper">
+                    <form action="" id="register-form" class="register-form">
+                        <h1 class="text-center" class="logo"><i class="fa fa-home"></i> PropertyFund</h1>
+                        <div class="register_name d-flex justify-between">
+                        <input type="text" id="register__fname" placeholder="First Name"><br />
+                        <input type="text" name="" id="register__lname" placeholder="Last Name"><br />
+                        </div>
+                        <div class="contact-details d-flex justify-between">
+                                <input type="text" id="register-email" placeholder="Email Address"><br />
+                                <input type="text" name="" id="register-number" placeholder="Phone Number"><br />
+                                </div>
+                                <select name="" id="gender">
+                                    <option value="">Gender</option>
+                                    <option value="male" id="gender__male">Male</option>
+                                    <option value="female" id="gender__female">Female</option>
+                                </select>
+                                <select name="" id="type-of-investor">
+                                        <option value="">Type of Investor</option>
+                                        <option value="developer" id="developer">Property Developer</option>
+                                        <option value="investor" id="investor">Investor</option>
+                                    </select>
+                                    <div class="password-details d-flex justify-between">
+                                            <input type="text" id="register__password" placeholder="Password"><br />
+                                            <input type="text" name="" id="confirm-password" placeholder="Confirm password"><br />
+                                            </div>
+                        <button type="submit"id="login-btn" class="register-btn">Submit</button>
+                        <a href="./login.html" class="login-btn">Login if you already have account</a>
+                    </form>
+                 </div>
+    </div>
+    <script src="/dist/javascript/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.developer{
+    background: linear-gradient(rgba(4,9,30,.9), rgba(4,9,30,.9)), url('/dist/images/property.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .developer__contents{
+        text-align: center;
+        width:70%;
+        margin:0 auto;
+        padding:8rem 0;
+        color:#fafafa;
+        h3{
+            padding-bottom:2rem;
+            letter-spacing: .05rem;
+        }
+        p{
+            margin-bottom: 3rem;
+            opacity: .8;
+        }
+        .register-btn{
+            color:#fff;
+            background: $primary-color;
+            padding:1rem 3rem;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            &:hover{
+                background: $secondary-color;
+                transition: all ease-out .5s;
+            }
+        }
+    }
+}

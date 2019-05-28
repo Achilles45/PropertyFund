@@ -1,0 +1,110 @@
+.register__wrapper{
+    width: 100%;
+    height:800px;
+    background: linear-gradient(rgba(4,9,30,.9), rgba(4,9,30,.9)), url('/dist/images/property.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    .register-form__wrapper{
+        margin:0 auto;
+        width:30%;
+        padding-top:8.5rem;
+        text-align: center;
+        .register-form{
+            background: #fafafa;
+            padding:1rem 1.7rem;
+            font-family: 'Varela Round';
+            .fa-home{
+                color:$primary-color;
+            }
+            h1{
+                margin-bottom:4rem;
+                margin-top:3rem;
+                color:$primary-color;
+            }
+            // .login-input{
+            //     display: grid;
+            //     grid-template-columns: repeat(auto-fit, minmax(50px,1fr));
+            //     grid-gap: 10px;
+            // }
+            input[type=text], input[type=password], input[type=email]{
+                width:170px;
+                height:2.4rem;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+                font-family: "Varela Round";
+                border:1px solid #636161;               
+                &::placeholder{
+                    font-family: "Varela Round";
+                }
+            }
+            select{
+                width:100%;
+                height:2.4rem;
+                margin-bottom: 1rem;
+                padding-left: 1rem;
+                font-family: "Varela Round";
+                border:1px solid #636161;
+                &:focus{
+                    outline:none;
+                    box-shadow: none;
+                }
+            }
+            input[type=text], input[type=password]:focus{
+                outline: none;
+                box-shadow: none;
+            }
+            .register-btn{
+                width:100%;
+                color:#fff;
+                background: $primary-color;
+                padding:.8rem 0;
+                outline: none;
+                border:none;
+                cursor: pointer;
+                margin-bottom:0.5rem;
+                font-weight: normal;
+                font-family: 'Varela Round';
+                font-size:1rem;
+                &:hover{
+                    background: $secondary-color;
+                    transition: all ease-in-out .5s;
+                }
+            }
+            .login-btn{
+                display: block;
+                text-decoration: none;
+                width:100%;
+                color:#fff;
+                background: $secondary-color;
+                padding:.7rem 0;
+                outline: none;
+                border:none;
+                cursor: pointer;
+                margin-bottom:1.5rem;
+                font-weight: normal;
+                font-family: 'Varela Round';
+                font-size:1rem;
+                &:hover{
+                    background: $primary-color;
+                    transition: all ease-in-out .5s;
+                }
+            }
+            }
+        }}
+
+        //LOGIN VERIFICATION OR ERROR MESSAGE STYLES
+.danger-alert{
+    width:100%;
+    background: red;
+    color:#fff;
+    padding: .7rem 0;
+    margin-bottom: 1rem;
+}
+.success-alert{
+    width:100%;
+    background: green;
+    color:#fff;
+    padding: .7rem 0;
+    margin-bottom: 1rem;
+}

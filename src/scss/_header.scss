@@ -1,0 +1,72 @@
+header{
+    background: #fff;
+    width:100%;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.5);
+    .header__wrapper{
+        width:100%;
+    }
+    .header__contents{
+        align-items: center;
+        padding:.9rem 0;
+        .logo{
+            color:rgba(0,0,0,.7);
+            .fa-home{
+                color:$primary-color;
+            }
+        }
+        .nav-links{
+            align-items: center !important;
+            li > a{
+                text-decoration: none;
+                padding-left: 20px;
+                color:$primary-color;
+                font-weight: 500;
+                font-size: 1rem;
+                &:hover{
+                    color:$secondary-color;
+                    transition: all ease-in-out .5s;
+                }
+            }
+        }
+    }
+}
+.nav-cart{
+    font-size:20px;
+    
+}
+.nav-message{
+    height:27px;
+}
+.navbar-toggler{
+    display: none;
+}
+
+//WELCOME MESSAG
+.welcome-message{
+    position: absolute;
+    right:0;
+    background: #ffffff;
+    height:590px;
+    display: none;
+    padding:2rem 6rem;
+    width:50%;
+    h3{
+        margin-top:2rem;
+        margin-bottom: 3rem;
+    }
+}
+.welcome-message--animate{
+    transition: all ease-in .5s;
+    display: block;
+}
+.cancel-sign{
+    position: absolute;
+    right:0;
+}
+.removeIcon{
+    margin-right:2rem;
+    cursor: pointer;
+    font-size:2rem;
+}

@@ -1,0 +1,91 @@
+.login__wrapper{
+    width: 100%;
+    height:800px;
+    background: linear-gradient(rgba(4,9,30,.9), rgba(4,9,30,.9)), url('/dist/images/property.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    .login-form__wrapper{
+        margin:0 auto;
+        width:30%;
+        padding-top:8.5rem;
+        text-align: center;
+        .login-form{
+            background: #fafafa;
+            padding:1rem 2rem;
+            font-family: 'Varela Round';
+            .fa-home{
+                color:$primary-color;
+            }
+            h1{
+                margin-bottom:4rem;
+                margin-top:3rem;
+                color:$primary-color;
+            }
+            input[type=text], input[type=password]{
+                width:100%;
+                height:2.7rem;
+                margin-bottom: 1.5rem;
+                padding-left: 1rem;
+                font-family: "Varela Round";
+                border:1px solid #636161;
+                &::placeholder{
+                    font-family: "Varela Round";
+                }
+            }
+            input[type=text], input[type=password]:focus{
+                outline: none;
+                box-shadow: none;
+                border:1px solid #616161;
+            }
+            .login-btn{
+                width:100%;
+                color:#fff;
+                background: $primary-color;
+                padding:.8rem 0;
+                outline: none;
+                border:none;
+                cursor: pointer;
+                margin-bottom:0.5rem;
+                font-weight: normal;
+                font-family: 'Varela Round';
+                font-size:1rem;
+                &:hover{
+                    background: $secondary-color;
+                    transition: all ease-in-out .5s;
+                }
+            }
+           .create-account__bnt{
+            color:#fff;
+            background: $secondary-color;
+            padding:.6rem;
+            font-family: 'Varela Round';
+            outline: none;
+            border:none;
+            cursor: pointer;
+            text-decoration: none;
+            width:100% !important;
+            display: block;
+            margin-bottom: 1rem;
+            &:hover{
+                background: $primary-color;
+                transition: all ease-in-out .5s;
+            }
+           }
+           .forget-password{
+               text-decoration: none;
+               color:$secondary-color;
+               margin-bottom: 3rem;
+           }
+        }
+    }
+}
+
+//LOGIN VERIFICATION OR ERROR MESSAGE STYLES
+.danger-alert{
+    width:100%;
+    background: red;
+    color:#fff;
+    padding: .7rem 0;
+    margin-bottom: 1rem;
+}
